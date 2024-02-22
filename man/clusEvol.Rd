@@ -62,7 +62,7 @@ Bolívar Morales Oñate, \email{bmoralesonate@gmail.com}, \url{https://sites.goo
 }
 
 \references{
-  Morales-Oñate, V., and Morales-Oñate, B. (2024). \emph{Cluster Evolution Analytics}. \url{https://mpra.ub.uni-muenchen.de/119152/}
+  Morales-Oñate, V., and Morales-Oñate, B. (2024). \emph{Cluster Evolution Analytics}. \url{https://mpra.ub.uni-muenchen.de/120220/}
 }
 
 \examples{
