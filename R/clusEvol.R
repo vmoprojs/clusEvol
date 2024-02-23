@@ -65,9 +65,9 @@ clusEvol <- function (x=NULL,objects=NULL, time = NULL,target.vars = NULL,
   }
   if(!all(sol.yrs))
   {
-    cat("Times with no selected object: \n")
-    print(yrs[which(sol.yrs)])
-    stop("Selected object must be in all analyzed time periods")
+    # warning("Times with no selected object: \n")
+    # print(yrs[which(sol.yrs)])
+    stop("Selected object must be included in all analyzed time periods")
   }
   
   # ST: dataframe for time.base:
@@ -93,8 +93,7 @@ clusEvol <- function (x=NULL,objects=NULL, time = NULL,target.vars = NULL,
   clusterStats <- NULL
   for (j in  1:length(yrs))
   {
-    # j = 1
-    # print(j)
+
     refdatos <- datos[which(datos[,time]==yrs[j]),c(objects,time,target.vars)]
     
     if(logscale & length(target.vars)>1){
@@ -142,7 +141,6 @@ clusEvol <- function (x=NULL,objects=NULL, time = NULL,target.vars = NULL,
       }
       
       kmodel <- do.call(stats::kmeans,args = clm.args)
-      # kmodel <- kmeans((scale(temp1)),ng)
       kmodelSol[[j]] <- kmodel
       
       if(clstats)
@@ -163,10 +161,6 @@ clusEvol <- function (x=NULL,objects=NULL, time = NULL,target.vars = NULL,
       clm.args <- list(x=temp1,...)
       kmodel <- do.call(clusterSim::cluster.Sim,args = clm.args)
       kmodelSol[[j]] <- kmodel
-      # , p=1,
-      # minClusterNo=3, maxClusterNo=6,
-      # icq="S",
-      # methods = c("m1","m2","m3","m5","m7")
       clase <- kmodel$optClustering
     }
     
@@ -202,10 +196,7 @@ clusEvol <- function (x=NULL,objects=NULL, time = NULL,target.vars = NULL,
   sl <- dplyr::bind_rows(results, .id = "time")
   
   sumdat <- summary(datos[,target.vars])
-  # return(list(datos = datos,target.vars=target.vars,
-  #             results = results,ECk = nbelong,ECkTot = nbelongTot,
-  #             Clus = Ksol,sumdat=sumdat,kmodelSol=kmodelSol,
-  #             clusterStats=clusterStats,sl = sl))
+
   clusEvol <- list(datos = datos,target.vars=target.vars,
                     results = results,ECk = nbelong,ECkTot = nbelongTot,
                     Clus = Ksol,sumdat=sumdat,kmodelSol=kmodelSol,
@@ -245,11 +236,8 @@ print.clusEvol <- function(x, digits = max(3, getOption("digits") - 3), ...)
 plot.clusEvol <- function(x,target,type = "heat",plotly=FALSE,...)
 {
   if(!inherits(x,"clusEvol")) stop("Enter an object obtained from the function clusEvol\n")
-  # library(ggplot2)
-  # library(viridis)
-  # x <- solclusEvolP
-  # target = "hc"
-  
+  oldop <- options()
+  on.exit(options(oldop))
   sl <- x$sl
   time <- x$sel[2]
   objs <- x$sel[1]
@@ -284,7 +272,7 @@ plot.clusEvol <- function(x,target,type = "heat",plotly=FALSE,...)
       print(plotly::ggplotly(p3))
     }else{print(p3)}
   }
-  
+ 
 }
 
 

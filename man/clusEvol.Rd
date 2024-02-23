@@ -75,24 +75,5 @@ time = "fecha",target.vars = c("montoAct","operAct"),
                         sel.obj="BANCO SOLIDARIO S.A.",init = min(actpas$fecha),
                         logscale = TRUE,ng = 5,clm = "pam")
 print(solclusEvol)
-
-
-
-
-#data("Produc", package="plm")
-
-#sel.obj <- "TEXAS"
-#solclusEvol <- clusEvol(x=Produc,objects="state", time = "year",
-# target.vars = c("pcap","emp"),
-#                        time.base=1986,sel.obj="TEXAS",
-# init = 1970,logscale = TRUE,
-#                        ng = 4,clm = "pam",scale = TRUE)
-#print(solclusEvol)    
-
-data("pwt1001")
-solclusEvol <- clusEvol(x=pwt1001[,-3],objects="countrycode", time = "year",
-target.vars = c("rgdpe","hc"),time.base=2019,sel.obj="ECU",
-init = 2001,logscale = TRUE,ng = 5,clm = "kmeans")
-print(solclusEvol)
 }
 \keyword{Cluster Evolution Analytics}
