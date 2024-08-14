@@ -20,7 +20,7 @@ its evolution (and that of its neighbors) up to the present.
 Our cross-platform version can be found at CRAN: `clusEvol` package. You
 can install it with:
 
-`install.packages("GeoModels")`
+`install.packages("clusEvol")`
 
 **Option 2**: Developer
 
