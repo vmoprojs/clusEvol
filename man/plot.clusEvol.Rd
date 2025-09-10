@@ -18,7 +18,7 @@
   \item{type}{Character; \code{heat} (default), \code{line}, \code{boxplot} are the options}
   \item{plotly}{Logical; if \code{FALSE}, a \code{ggplotly} plot is returned}
   \item{\dots}{other arguments to be passed to the function
-    \code{\link{ggplot}}   }
+    \code{\link[ggplot2:ggplot]{ggplot}}   }
 }
 
 

@@ -8,6 +8,6 @@
 \usage{actpas}
 \format{A dataframe containing 358 observations and 25 columns.}
 \references{
-  Morales-Oñate, V., and Morales-Oñate, B. (2024). \emph{Cluster Evolution Analytics}. \url{https://mpra.ub.uni-muenchen.de/120220/}
+  Morales-Oñate, V., and Morales-Oñate, B. (2024). \emph{Cluster Evolution Analytics}. \doi{10.1016/j.softx.2024.101921}
 }
 \keyword{datasets}

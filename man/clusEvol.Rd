@@ -57,12 +57,12 @@ clusEvol can be synthetized has the following steps
   
   }
 
-\author{Víctor Morales Oñate, \email{victor.morales@uv.cl}, \url{https://sites.google.com/site/moralesonatevictor/},\url{https://www.linkedin.com/in/vmoralesonate/}
+\author{Víctor Morales Oñate, \email{vmorales.ppb@gmail.com}, \url{https://sites.google.com/site/moralesonatevictor/},\url{https://www.linkedin.com/in/vmoralesonate/}
 Bolívar Morales Oñate, \email{bmoralesonate@gmail.com}, \url{https://sites.google.com/site/moralesonatevictor/}
 }
 
 \references{
-  Morales-Oñate, V., and Morales-Oñate, B. (2024). \emph{Cluster Evolution Analytics}. \url{https://mpra.ub.uni-muenchen.de/120220/}
+  Morales-Oñate, V., and Morales-Oñate, B. (2024). \emph{Cluster Evolution Analytics}. \doi{10.1016/j.softx.2024.101921}
 }
 
 \examples{

@@ -11,6 +11,6 @@
 \details{The Penn World Table 10.01 (<https://www.rug.nl/ggdc/productivity/pwt/>) provides information on relative levels of income, output, input, and productivity for 183 countries between 1950 and 2019.
   }
 \references{
-  Morales-Oñate, V., and Morales-Oñate, B. (2024). \emph{Cluster Evolution Analytics}. \url{https://mpra.ub.uni-muenchen.de/120220/}
+  Morales-Oñate, V., and Morales-Oñate, B. (2024). \emph{Cluster Evolution Analytics}. \doi{10.1016/j.softx.2024.101921}
 }
 \keyword{datasets}
